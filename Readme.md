@@ -98,7 +98,7 @@ I've had quite a few problems when it comes to compiling and running npm within 
 
 * When running `npm install` for the first time, do so from outside the VM
 * If you get an error when running `npm run dev`, do the following from inside the VM:
-   * rm -rf node_modules
-   * rm package-lock.json
-   * npm cache clear --force
+   * `rm -rf node_modules`
+   * `rm package-lock.json`
+   * `npm cache clear --force`
 * Then from outside the VM run `npm install`, and all should be solved.
