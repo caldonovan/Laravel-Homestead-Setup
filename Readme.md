@@ -68,7 +68,7 @@ The .env file contains all the settings that Laravel uses for database connectio
 1. Open the project folder in your preferred editor.
 2. Rename the `env.example` file to `.env`
 3. Open the `.env` file
-4. The only thing we need to change is `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD`. Change them as follows:
+4. The only thing we need to change is `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD`. We will be using the defaults for homestead as they are local databases and no sensitive data is present, therefore we don't need to worry about changing the default password. Change them as follows:
     * `DB_DATABASE=homestead`
     * `DB_USERNAME=homestead`
     * `DB_PASSWORD=secret`
