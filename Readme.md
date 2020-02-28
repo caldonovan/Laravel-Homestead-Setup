@@ -91,3 +91,14 @@ All the laravel commands that can be executed in the project folder are prefixed
 * `php artisan migrate:fresh`: Drop and re-create all databases with no data.
 * `php artisan migrate:fresh --seed`: Same as above, but run the seeders to populate the database.
 * `php artisan make`: Basically the main command used for Laravel, if you run this you can see all the commands used with make to create whatever you want.
+
+### NPM Issues
+
+I've had quite a few problems when it comes to compiling and running npm within the VM, so here are a few tips to avoid the fuckery that is npm problems:
+
+* When running `npm install` for the first time, do so from outside the VM
+* If you get an error when running `npm run dev`, do the following from inside the VM:
+   * rm -rf node_modules
+   * rm package-lock.json
+   * npm cache clear --force
+* Then from outside the VM run `npm install`, and all should be solved.
