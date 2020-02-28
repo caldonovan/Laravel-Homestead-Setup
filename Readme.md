@@ -56,7 +56,7 @@ We must now clone the project repo and install all its dependencies. This will t
 4. You should see the bash terminal prompt, `cd` to the folder you chose for the project files (`/home/vagrant/code`)
 5. Clone the repo: `git clone https://github.com/KyleBow21/pm_system`
 6. `cd` into the source files.
-7. Type `composer install`, this will begin installing all the dependancies for Laravel.
+7. Type `composer install`, this will begin installing all the dependencies for Laravel.
 
 ![Composer Install Example](composer_install_example.jpg)
 8. You are now ready to start editing files.
