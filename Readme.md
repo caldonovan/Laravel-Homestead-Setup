@@ -80,7 +80,7 @@ There are a few commands that are useful when developing with Laravel and Homest
 ### Vagrant Commands
 
 * `vagrant up`: Starts the VM
-* `vagrant down`: Stops the VM
+* `vagrant halt`: Stops the VM
 * `vagrant reload`: Reboots the VM
 * `vagrant reload --provision`: Reloads and provisions the VM (Do this every time you want to reboot the VM, as it reloads all configuration files.)
 
