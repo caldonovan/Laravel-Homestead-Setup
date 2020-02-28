@@ -43,6 +43,9 @@ Homestead requires you to modify the hosts file so you don't have to type in an 
 
 1. Navigate to `C:\Windows\System32\drivers\etc`
 2. Open the `hosts` file in an editor, this will require administrator privilages to edit.
+
+![Hosts File Example Image](hosts_file_example.jpg)
+
 3. Add a line to the hosts file which corresponds to the URL of the site you named in the `Homestead.yaml` file, and the IP of the homestead box. See the example image above.
 4. Save the file.
 
