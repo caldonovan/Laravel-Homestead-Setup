@@ -36,6 +36,7 @@ You must have the following installed and configured in order to do this:
 ![Homestead Yaml File](homestead_yaml_example.jpg?raw=true)
 
 5. The sites section contains the path to the public folder of the project source files. As well as the url that will be used to view the site.
+6. When changing values in the .yaml file, you must reload the machine with the `--provision` flag.
 
 ### Accessing Homestead outside of its Directory
 
