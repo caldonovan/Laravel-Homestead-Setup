@@ -1,4 +1,4 @@
-# Laravel 6.0 Installation Guide for Windows
+# Laravel 7.0 Installation Guide for Windows
 
 ## Pre-requisites
 
