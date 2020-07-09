@@ -1,4 +1,4 @@
-# Laravel 7.0 Installation Guide for Windows
+# Laravel Homestead Installation Guide for Windows
 
 ## Pre-requisites
 
