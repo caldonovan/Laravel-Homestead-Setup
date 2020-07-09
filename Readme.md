@@ -60,15 +60,19 @@ You must have the following installed and configured in order to do this:
 ### Vagrant Commands
 
 * `vagrant up`: Starts the VM
+* `vagrant ssh`: SSH into the VM
 * `vagrant halt`: Stops the VM
 * `vagrant reload`: Reboots the VM
 * `vagrant reload --provision`: Reloads and provisions the VM (Do this every time you want to reboot the VM, as it reloads all configuration files.)
 
+> If you have added the homestead.bat to your PATH, you can swap `vagrant` for `homestead` to achieve these commands from outside the homestead directory.
+
 ### Making New Apps
 
-* Navigate to the code folder you created to house all the projects
-* Type `laravel new <project_name>`, where <project_name> is the name you want to call your app
-* After composer has finished installing, open the project folder in your favourite editor
+* SSH into the VM.
+* Navigate to the code folder you created to house all the projects.
+* Type `laravel new <project_name>`, where <project_name> is the name you want to call your app.
+* After composer has finished installing Laravel, open the project folder in your favourite editor.
 * Investigate the `.env` file, and configure the DB values as required, the default values for the homestead DB are:
 
 ```properties
@@ -86,7 +90,7 @@ DB_PASSWORD=secret
 * Create a new entry that has a URL of your choice, avoid using `.app` or `.dev` unless you want to tackle with SSL issues!
 * Add the direct path to the project files, such as: `/home/vagrant/code/blog/public`. Ensure it points to `public`.
 * Open your `hosts` file located at `C:\Windows\System32\drivers\etc`.
-* Add an entry with the IP of your homestead box, usually `192.168.10.10`, and the domain name you chose in the yaml file.
+* Add an entry with the IP of your homestead box listed in the Homestead.yaml file, and the domain name you chose.
 * Re-provision the machine using `vagrant reload --provision`.
 * Navigate to the domain you chose in your browser, you should see the default Laravel landing page.
 
@@ -104,7 +108,8 @@ All the laravel commands that can be executed in the project folder are prefixed
 
 ### NPM Issues
 
-I've had quite a few problems when it comes to compiling and running npm within the VM, so here are a few tips to avoid the fuckery that is npm problems:
+There are a few considerations when using NPM from within the VM, namely permissions. Whenever possible, try to run npm commands outside of the VM.
+If you encounter errors when installing packages using npm, you can use the following commands to fix it:
 
 * When running `npm install` for the first time, do so from outside the VM
 * If you get an error when running `npm run dev`, do the following from inside the VM:
