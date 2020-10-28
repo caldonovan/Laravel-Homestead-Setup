@@ -45,6 +45,9 @@ serve the sites.
 2. Type ``php -S localhost:8000`` to start the development server.
 3. Access it from your browser according to the url: ``localhost:8000``.
 
+Of course, if your app relies on a database, ensure that you have started the service using ``sudo service mysql start``. 
+And before that, follow the setup for mysql server on Ubuntu using any online guide.
+
 ## Homestead
 
 ### Pre-requisites
