@@ -4,23 +4,23 @@
 
 Although this is the recommended method of development in the Laravel docs, you do 
 not have to follow it. An alternative to homestead, if you have Windows 10 Home and 
-above, is to use the Windows Subsystem for Linux.
+above, is to use the Windows Subsystem for Linux, which is detailed below.
 
-### WSL
+## WSL
 
 WSL allows you to run a Linux OS inside of your Windows installation. Much like a VM, 
 but with more convienient integration and set-up. WSL is more suited to people who are 
 comfortable with the command line, and don't require any GUI tools. Amazingly, WSL works 
 wonderfully with web development, and is simple to install.
 
-#### Enabling WSL
+### Enabling WSL
 
 1. Open the start menu and type 'features'.
 2. Open 'Turn windows features on or off'.
 3. Scroll down and tick 'Windows Subsystem for Linux'.
 4. Click OK and restart your PC when prompted.
 
-#### Installing an OS
+### Installing an OS
 
 1. Open the Windows Store app.
 2. Search for 'Ubuntu'.
@@ -28,7 +28,7 @@ wonderfully with web development, and is simple to install.
 4. Launch the OS either through the terminal using ``ubuntu-20.04``, or click on the start menu shortcut.
 5. Follow the instructions on setting up the instance.
 
-#### Installing Pre-requisits
+### Installing Pre-requisits
 
 1. Perform a system update using ``sudo apt update && sudo apt upgrade``.
 2. Install php, mysql-server, and composer using their respective package names.
@@ -36,7 +36,7 @@ wonderfully with web development, and is simple to install.
 4. Follow the Laravel docs to install the ``laravel/installer`` package globally.
 5. If you're planning on using VueJS, install node and npm.
 
-#### Serving sites
+### Serving sites
 
 Once you have cloned a repository that you want to work on, you can use the built-in PHP development server to 
 serve the sites. 
@@ -45,7 +45,9 @@ serve the sites.
 2. Type ``php -S localhost:8000`` to start the development server.
 3. Access it from your browser according to the url: ``localhost:8000``.
 
-## Pre-requisites
+## Homestead
+
+### Pre-requisites
 
 You must have the following installed and configured in order to do this:
 
@@ -54,14 +56,14 @@ You must have the following installed and configured in order to do this:
 * Virtualization enabled in BIOS (Typically `AMD-V` or `VT-x`).
 * I would recommend you have at least 4GB RAM and 4 cores for performance.
 
-## Installing the Box
+### Installing the Box
 
 1. Open CMD
 2. Type `vagrant box add laravel/homestead`
 3. When prompted, chose `3. Virtualbox`
 4. Wait for the install to finish (typically takes at least 5 minutes on decent internet)
 
-## Installing Homestead
+### Installing Homestead
 
 1. Create a folder in a location of your choosing to install Homestead
 2. Clone the Homestead repo: `git clone https://github.com/laravel/homestead.git`
@@ -69,7 +71,7 @@ You must have the following installed and configured in order to do this:
 4. Switch to release `git checkout release`
 5. Execute `init.bat`
 
-## Configuring Homestead
+### Configuring Homestead
 
 1. Open `Homestead.yaml` in an editor
 2. IP, Memory, CPU and Provider can be kept as default
@@ -83,7 +85,7 @@ You must have the following installed and configured in order to do this:
 5. The sites section contains the path to the public folder of the project source files. As well as the url that will be used to view the site.
 6. When changing values in the .yaml file, you must reload the machine with the `--provision` flag.
 
-### Accessing Homestead outside of its Directory
+#### Accessing Homestead outside of its Directory
 
 * Create a `homestead.bat` file in a folder of your choosing
 * Add the following code to it, replacing the path for the Homestead instance with yours:
@@ -102,7 +104,7 @@ You must have the following installed and configured in order to do this:
 ```
 * Add this file to your `PATH` environment variable.
 
-### Vagrant Commands
+#### Vagrant Commands
 
 * `vagrant up`: Starts the VM
 * `vagrant ssh`: SSH into the VM
@@ -112,7 +114,7 @@ You must have the following installed and configured in order to do this:
 
 > If you have added the homestead.bat to your PATH, you can swap `vagrant` for `homestead` to achieve these commands from outside the homestead directory.
 
-### Making New Apps
+#### Making New Apps
 
 * SSH into the VM.
 * Navigate to the code folder you created to house all the projects.
@@ -128,7 +130,7 @@ DB_PASSWORD=secret
 
 ```
 
-### Viewing Your New App
+#### Viewing Your New App
 
 > This is specifically for Windows
 * Navigate to the `Homestead.yaml` file
@@ -139,7 +141,7 @@ DB_PASSWORD=secret
 * Re-provision the machine using `vagrant reload --provision`.
 * Navigate to the domain you chose in your browser, you should see the default Laravel landing page.
 
-### Artisan Commands
+#### Artisan Commands
 
 All the laravel commands that can be executed in the project folder are prefixed with `php artisan`:
 
@@ -151,7 +153,7 @@ All the laravel commands that can be executed in the project folder are prefixed
 * With the default aliases included with Homestead, you can shorten `php artisan` to just `art`. For example, `art migrate`.
 * This also applies to some composer commands, such as `composer dump-autoload` to `composer dump`.
 
-### NPM Issues
+#### NPM Issues
 
 There are a few considerations when using NPM from within the VM, namely permissions. Whenever possible, try to run npm commands outside of the VM.
 If you encounter errors when installing packages using npm, you can use the following commands to fix it:
