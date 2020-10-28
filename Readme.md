@@ -1,5 +1,50 @@
 # Laravel Homestead Installation Guide for Windows
 
+## Before We Begin
+
+Although this is the recommended method of development in the Laravel docs, you do 
+not have to follow it. An alternative to homestead, if you have Windows 10 Home and 
+above, is to use the Windows Subsystem for Linux.
+
+### WSL
+
+WSL allows you to run a Linux OS inside of your Windows installation. Much like a VM, 
+but with more convienient integration and set-up. WSL is more suited to people who are 
+comfortable with the command line, and don't require any GUI tools. Amazingly, WSL works 
+wonderfully with web development, and is simple to install.
+
+#### Enabling WSL
+
+1. Open the start menu and type 'features'.
+2. Open 'Turn windows features on or off'.
+3. Scroll down and tick 'Windows Subsystem for Linux'.
+4. Click OK and restart your PC when prompted.
+
+#### Installing an OS
+
+1. Open the Windows Store app.
+2. Search for 'Ubuntu'.
+3. Install either version 18.04 or 20.04.
+4. Launch the OS either through the terminal using ``ubuntu-20.04``, or click on the start menu shortcut.
+5. Follow the instructions on setting up the instance.
+
+#### Installing Pre-requisits
+
+1. Perform a system update using ``sudo apt update && sudo apt upgrade``.
+2. Install php, mysql-server, and composer using their respective package names.
+3. Make sure to insall all the required extensions Laravel requires using ``sudo apt install php7.4-<extension_name>``.
+4. Follow the Laravel docs to install the ``laravel/installer`` package globally.
+5. If you're planning on using VueJS, install node and npm.
+
+#### Serving sites
+
+Once you have cloned a repository that you want to work on, you can use the built-in PHP development server to 
+serve the sites. 
+
+1. Navigate to the root directory of the project.
+2. Type ``php -S localhost:8000`` to start the development server.
+3. Access it from your browser according to the url: ``localhost:8000``.
+
 ## Pre-requisites
 
 You must have the following installed and configured in order to do this:
