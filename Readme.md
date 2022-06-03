@@ -1,5 +1,7 @@
 # Laravel Homestead Installation Guide for Windows
 
+> Note: Laravel Sail is now the preferred method, so use that instead. Or you can use Laradock.
+
 ## Before We Begin
 
 Although this is the recommended method of development in the Laravel docs, you do 
